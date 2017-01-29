@@ -16,7 +16,7 @@ namespace _10.Data_Overflow
             ulong smallerNumber = Math. Min(num1, num2);
             var biggerNumberType = "";
             var smallerNumberType = "";
-            ulong overflow = 1;
+            double overflow = 1;
 
             if (biggerNumber == num1)
             {
@@ -30,7 +30,7 @@ namespace _10.Data_Overflow
                 }
                 else if (uint.MinValue <= num1 && num1 <= uint.MaxValue)
                 {
-                    biggerNumberType = "unit";
+                    biggerNumberType = "uint";
                 }
                 else biggerNumberType = "ulong";
 
@@ -44,26 +44,80 @@ namespace _10.Data_Overflow
                 }
                 else if (uint.MinValue <= num2 && num2 <= uint.MaxValue)
                 {
-                    smallerNumberType = "unit";
+                    smallerNumberType = "uint";
                 }
                 else smallerNumberType = "ulong";
 
 
-                switch (biggerNumberType)
-                    {
-                    case "byte": overflow = num1/byte.MaxValue;
-                    break;
+                switch (smallerNumberType)
+                {
+                    case "byte":
+                        overflow = Math.Round((double)((double)num1 / (double)byte.MaxValue));
+                        break;
                     case "ushort":
-                        overflow = num1 / byte.MaxValue;
+                        overflow = Math.Round((double)((double)num1 / (double)ushort.MaxValue));
                         break;
-                    case "byte":
-                        overflow = num1 / byte.MaxValue;
+                    case "uint":
+                        overflow = Math.Round((double)((double)num1 / (double)uint.MaxValue));
                         break;
+                    case "ulong":
+                        overflow = Math.Round((double)((double)num1 / (double)ulong.MaxValue));
+                        break;
+                }
+                
+                
+            }
+            else if (biggerNumber == num2)
+            {
+                if (byte.MinValue <= num2 && num2 <= byte.MaxValue)
+                {
+                    biggerNumberType = "byte";
+                }
+                else if (ushort.MinValue <= num2 && num2 <= ushort.MaxValue)
+                {
+                    biggerNumberType = "ushort";
+                }
+                else if (uint.MinValue <= num2 && num2 <= uint.MaxValue)
+                {
+                    biggerNumberType = "uint";
+                }
+                else biggerNumberType = "ulong";
+
+                if (byte.MinValue <= num1 && num1 <= byte.MaxValue)
+                {
+                    smallerNumberType = "byte";
+                }
+                else if (ushort.MinValue <= num1 && num1 <= ushort.MaxValue)
+                {
+                    smallerNumberType = "ushort";
+                }
+                else if (uint.MinValue <= num1 && num1 <= uint.MaxValue)
+                {
+                    smallerNumberType = "uint";
+                }
+                else smallerNumberType = "ulong";
+
+
+                switch (smallerNumberType)
+                {
                     case "byte":
-                        overflow = num1 / byte.MaxValue;
+                        overflow = Math.Round((double)((double)num2 / (double)byte.MaxValue));
+                        break;
+                    case "ushort":
+                        overflow = Math.Round((double)((double)num2 / (double)ushort.MaxValue));
+                        break;
+                    case "uint":
+                        overflow = Math.Round((double)((double)num2 / (double)uint.MaxValue));
+                        break;
+                    case "ulong":
+                        overflow = Math.Round((double)((double)num2 / (double)ulong.MaxValue));
                         break;
                 }
             }
+            
+            Console.WriteLine($"bigger type: {biggerNumberType}");
+            Console.WriteLine($"smaller type: {smallerNumberType}");
+            Console.WriteLine($"{biggerNumber} can overflow {smallerNumberType} {overflow} times");
             
             
         }

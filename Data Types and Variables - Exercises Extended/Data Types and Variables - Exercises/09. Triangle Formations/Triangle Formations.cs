@@ -28,15 +28,15 @@ namespace _09.Triangle_Formations
                 }
                 else if (sideC * sideC + sideB * sideB == sideA * sideA)
                 {
-                    Console.WriteLine("Triangle has a right angle between sides c and b");
+                    Console.WriteLine("Triangle has a right angle between sides b and c");
                 }
                 else Console.WriteLine("Triangle has no right angles");
             }
-            else Console.WriteLine("Invalid triangle.");
+            else Console.WriteLine("Invalid Triangle.");
 
-            
 
-            
+
+
 
 
         }

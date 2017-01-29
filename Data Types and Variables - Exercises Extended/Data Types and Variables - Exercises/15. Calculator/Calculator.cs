@@ -30,7 +30,7 @@ namespace _15.Calculator
                     break;
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine($"{leftOperand} {mathOperator} {rightOperand} = {result}");
         }
     }
 }

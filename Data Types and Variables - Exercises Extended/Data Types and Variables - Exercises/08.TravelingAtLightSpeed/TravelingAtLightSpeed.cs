@@ -13,7 +13,7 @@ namespace _08.TravelingAtLightSpeed
             decimal numerOfLightYears = decimal.Parse(Console.ReadLine());
             decimal distanceInKilometers = numerOfLightYears * 945e+10m;
             decimal speed = 3e+5m;
-            decimal distanceForOneWeek = 7m * 24m * 60m * 60m*speed;
+            decimal distanceForOneWeek = 7m * 24m * 60m * 60m * speed;
             decimal distanceForOneDay = 24m * 60m * 60m * speed;
             decimal distanceForOneHour = 60m * 60m * speed;
             decimal distanceForOneMinute = 60m * speed;
@@ -23,18 +23,18 @@ namespace _08.TravelingAtLightSpeed
             decimal totalHours = distanceInKilometers / distanceForOneHour;
             decimal totalMinutes = distanceInKilometers / distanceForOneMinute;
             decimal totalSeconds = distanceInKilometers / distanceForOneSecond;
-            
-            Console.WriteLine("{0:f0} weeks", totalWeeks);
-            decimal integerWeeks = Math.Floor(totalWeeks);
-            Console.WriteLine("{0:f0 days}", totalDays - integerWeeks*7 );
-            decimal integerDays = Math.Floor(totalDays);
-            Console.WriteLine("{0:f0 hours}",totalHours-integerDays*24);
-            decimal integerHours = Math.Floor(totalHours);
-            Console.WriteLine("{0:F0 minutes}",totalMinutes-integerHours*60);
-            decimal integerMinutes = Math.Floor(totalMinutes);
-            Console.WriteLine("{0:f0 seconds}", totalSeconds-integerMinutes*60);
 
-            
+            Console.WriteLine("{0:f0} weeks", Math.Floor(totalWeeks));
+            decimal integerWeeks = Math.Floor(totalWeeks);
+            Console.WriteLine("{0:f0} days",Math.Floor( totalDays - integerWeeks * 7));
+            decimal integerDays = Math.Floor(totalDays);
+            Console.WriteLine("{0:f0} hours", Math.Floor(totalHours - integerDays * 24));
+            decimal integerHours = Math.Floor(totalHours);
+            Console.WriteLine("{0:F0} minutes", Math.Floor(totalMinutes - integerHours * 60));
+            decimal integerMinutes = Math.Floor(totalMinutes);
+            Console.WriteLine("{0:f0} seconds", Math.Floor(totalSeconds - integerMinutes * 60));
+
+
         }
     }
 }

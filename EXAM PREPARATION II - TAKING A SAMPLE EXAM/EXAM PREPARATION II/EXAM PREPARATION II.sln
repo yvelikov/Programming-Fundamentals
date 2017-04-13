@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.CharityMarathon", "01.CharityMarathon\01.CharityMarathon.csproj", "{E7A35BE6-0976-4661-9C20-F818D03130EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Ladybugs", "02.Ladybugs\02.Ladybugs.csproj", "{2E26DBC1-B537-4E60-99EC-C56E3698DCE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.NetherRealms", "03.NetherRealms\03.NetherRealms.csproj", "{007AEF6B-6389-454C-B0CF-F4D479545AF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7A35BE6-0976-4661-9C20-F818D03130EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A35BE6-0976-4661-9C20-F818D03130EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A35BE6-0976-4661-9C20-F818D03130EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A35BE6-0976-4661-9C20-F818D03130EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E26DBC1-B537-4E60-99EC-C56E3698DCE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E26DBC1-B537-4E60-99EC-C56E3698DCE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E26DBC1-B537-4E60-99EC-C56E3698DCE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E26DBC1-B537-4E60-99EC-C56E3698DCE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007AEF6B-6389-454C-B0CF-F4D479545AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007AEF6B-6389-454C-B0CF-F4D479545AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007AEF6B-6389-454C-B0CF-F4D479545AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007AEF6B-6389-454C-B0CF-F4D479545AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
